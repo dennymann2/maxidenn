@@ -18,12 +18,12 @@ import { howItWorksSteps } from '../content/how-it-works';
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+    <div class="flex flex-col gap-4 md:flex-row md:items-stretch">
       {
         howItWorksSteps.map((step, index) => (
-          <div class="relative">
+          <>
             <div
-              class={`scroll-fade-up border-brand-surface rounded-xl border-2 bg-white p-8 stagger-${index + 1}`}
+              class={`scroll-fade-up border-brand-surface flex-1 rounded-xl border-2 bg-white p-8 stagger-${index + 1}`}
             >
               <div class="bg-brand-accent mb-6 flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold text-white">
                 {step.number}
@@ -33,15 +33,16 @@ import { howItWorksSteps } from '../content/how-it-works';
               </h3>
               <p class="text-brand-muted leading-relaxed">{step.description}</p>
             </div>
+
             {index < howItWorksSteps.length - 1 && (
-              <div class="absolute top-1/2 -right-4 hidden -translate-y-1/2 transform md:block">
+              <div class="hidden items-center justify-center px-2 md:flex">
                 <Icon
                   name="heroicons:chevron-right"
-                  class="text-brand-secondary h-8 w-8"
+                  class="text-brand-secondary h-7 w-7 flex-shrink-0"
                 />
               </div>
             )}
-          </div>
+          </>
         ))
       }
     </div>
