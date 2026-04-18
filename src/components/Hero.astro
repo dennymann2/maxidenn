@@ -1,56 +1,63 @@
 ---
 import { siteConfig } from '../config.ts';
+import { Icon } from 'astro-icon/components';
 ---
 
 <section
-  class="mono-mesh to-mono-lighter relative bg-gradient-to-b from-white px-4 pt-32 pb-20 sm:px-6 lg:px-8"
+  class="mono-mesh relative bg-brand-bg px-4 pt-32 pb-20 sm:px-6 lg:px-8"
 >
-  <div class="bg-mono-black absolute top-32 left-0 h-32 w-1"></div>
-  <div class="bg-mono-black absolute top-32 right-0 h-32 w-1"></div>
+  <div class="border-brand-accent absolute top-32 left-0 h-32 w-1 opacity-40">
+  </div>
+  <div class="border-brand-accent absolute top-32 right-0 h-32 w-1 opacity-40">
+  </div>
 
   <div class="mx-auto max-w-7xl">
     <div class="mx-auto max-w-4xl text-center">
       <h1
-        class="text-mono-black scroll-fade-up mb-6 text-5xl leading-tight font-extrabold sm:text-6xl lg:text-7xl"
+        class="text-brand-primary scroll-fade-up mb-6 text-5xl leading-tight font-extrabold sm:text-6xl lg:text-7xl"
       >
         {siteConfig.hero.headline}<br />
-        <span class="text-mono-darker">{siteConfig.hero.subheadline}</span>
+        <span class="text-brand-accent">{siteConfig.hero.subheadline}</span>
       </h1>
+
       <p
-        class="text-mono-dark scroll-fade-up mb-10 text-xl leading-relaxed sm:text-2xl"
+        class="text-brand-muted scroll-fade-up mb-10 text-xl leading-relaxed sm:text-2xl"
       >
         {siteConfig.hero.description}
       </p>
+
       <div
-        class="scroll-fade-up mb-16 flex flex-col justify-center gap-4 sm:flex-row"
+        class="scroll-fade-up mb-12 flex flex-col justify-center gap-4 sm:flex-row"
       >
         <a
           href={siteConfig.hero.cta.primary.href}
-          class="bg-mono-black rounded-lg px-8 py-4 font-semibold text-white shadow-lg"
+          class="bg-brand-accent hover:bg-brand-accent-hover rounded-lg px-8 py-4 font-semibold text-white shadow-lg transition-colors"
         >
           {siteConfig.hero.cta.primary.text}
         </a>
         <a
           href={siteConfig.hero.cta.secondary.href}
-          class="border-mono-black text-mono-black rounded-lg border-2 bg-white px-8 py-4 font-semibold"
+          class="border-brand-primary text-brand-primary hover:bg-brand-surface rounded-lg border-2 bg-transparent px-8 py-4 font-semibold transition-colors"
         >
+          <Icon name="heroicons:phone" class="mr-2 inline h-5 w-5" />
           {siteConfig.hero.cta.secondary.text}
         </a>
       </div>
 
       <div
-        class="border-mono-lighter mx-auto grid max-w-3xl grid-cols-3 gap-8 border-t pt-20"
+        class="scroll-fade-up flex flex-wrap justify-center gap-3"
       >
         {
-          siteConfig.hero.stats.map((stat, index) => (
-            <div class={`float scroll-fade-up stagger-${index + 1}`}>
-              <div class="text-mono-black mb-2 text-4xl font-bold">
-                {stat.value}
-              </div>
-              <div class="text-mono-gray text-sm tracking-wide uppercase">
-                {stat.label}
-              </div>
-            </div>
+          siteConfig.hero.badges.map((badge, index) => (
+            <span
+              class={`stagger-${index + 1} border-brand-surface bg-white/70 text-brand-primary inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium shadow-sm`}
+            >
+              <Icon
+                name="heroicons:check-circle"
+                class="text-brand-accent h-4 w-4 flex-shrink-0"
+              />
+              {badge}
+            </span>
           ))
         }
       </div>

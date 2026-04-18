@@ -1,5 +1,5 @@
 // ============================================
-// SITE CONFIGURATION
+// SITE CONFIGURATION – maxidenn
 // ============================================
 
 export const siteConfig = {
@@ -7,21 +7,24 @@ export const siteConfig = {
   // SITE METADATA & SEO
   // ============================================
   site: {
-    name: 'AI Agent Platform',
-    title: 'AI Agent Platform - Intelligent Automation for Modern Teams',
+    name: 'maxidenn',
+    title: 'maxidenn – Websites für lokale Betriebe',
     description:
-      'Transform your business with autonomous AI agents. Automate workflows, integrate seamlessly, and scale effortlessly. Start free today.',
+      'Professionelle Websites für lokale Unternehmen. Schnell, klar und ohne Baukasten-Look. Mehr Vertrauen, mehr Anfragen.',
     keywords:
-      'AI agents, automation, workflow automation, AI platform, business automation',
-    email: 'hello@aiagentplatform.com',
+      'Webdesign lokale Unternehmen, Website Gastronomie, Website Shishabar, Website Eisdiele, lokale Auffindbarkeit, Webdesign',
+    email: 'hallo@maxidenn.de', // TODO: replace with real email
+    phone: '+49 151 00000000', // TODO: replace with real phone
+    whatsapp: 'https://wa.me/4915100000000', // TODO: replace with real WhatsApp link
+    location: 'Deutschland',
+    googleBusinessUrl: '#', // TODO: replace with real Google Business Profile URL
 
-    // Open Graph / Twitter
-    ogTitle: 'AI Agent Platform - Intelligent Automation',
+    ogTitle: 'maxidenn – Websites für lokale Betriebe',
     ogDescription:
-      'Transform your business with autonomous AI agents that work 24/7',
+      'Professionelle Websites, die Vertrauen aufbauen und Anfragen bringen.',
     twitterCard: 'summary_large_image',
-    twitterTitle: 'AI Agent Platform',
-    twitterDescription: 'Intelligent automation for modern teams',
+    twitterTitle: 'maxidenn – Webdesign für lokale Betriebe',
+    twitterDescription: 'Schnell, klar und ohne Baukasten-Look. Mehr Vertrauen, mehr Anfragen.',
   },
 
   // ============================================
@@ -29,13 +32,12 @@ export const siteConfig = {
   // ============================================
   navigation: {
     links: [
-      { name: 'Features', href: '#features' },
-      { name: 'How It Works', href: '#how-it-works' },
-      { name: 'Pricing', href: '#pricing' },
-      { name: 'FAQ', href: '#faq' },
+      { name: 'Leistungen', href: '#features' },
+      { name: 'Referenzen', href: '#testimonials' },
+      { name: 'Kontakt', href: '#contact' },
     ],
     cta: {
-      text: 'Get Started',
+      text: 'Kostenloses Erstgespräch',
       href: '#contact',
     },
   },
@@ -44,44 +46,75 @@ export const siteConfig = {
   // HERO SECTION
   // ============================================
   hero: {
-    headline: 'Intelligent AI Agents',
-    subheadline: 'Built for Your Business',
+    headline: 'Websites für lokale Betriebe,',
+    subheadline: 'die Vertrauen aufbauen und Anfragen bringen.',
     description:
-      'Transform your workflow with autonomous AI agents that handle complex tasks, learn from your data, and deliver results 24/7. No coding required.',
+      'Wir gestalten und entwickeln moderne Websites für lokale Betriebe – damit Kunden Sie schneller verstehen, eher vertrauen und einfacher Kontakt aufnehmen.',
     cta: {
       primary: {
-        text: 'Get Started Free',
+        text: 'Kostenloses Erstgespräch vereinbaren',
         href: '#contact',
       },
       secondary: {
-        text: 'See How It Works',
-        href: '#how-it-works',
+        text: 'Kurz anrufen',
+        href: 'tel:+4915100000000', // TODO: replace with real phone
       },
     },
-    stats: [
-      { value: '10k+', label: 'Active Agents' },
-      { value: '99.9%', label: 'Uptime' },
-      { value: '5M+', label: 'Tasks Automated' },
+    badges: [
+      'Persönlicher Ansprechpartner',
+      'Sauber entwickelt, kein Baukasten',
+      'Auf lokale Auffindbarkeit ausgelegt',
     ],
   },
 
   // ============================================
-  // FEATURES SECTION
+  // TRUST BAR
+  // ============================================
+  trustBar: {
+    googleRating: '5,0',
+    googleReviewCount: '12', // TODO: update with real count
+    googleUrl: '#', // TODO: replace with real Google Business Profile URL
+    replyTime: 'Antwortet meist innerhalb von 24 Stunden',
+    industries: ['Gastronomie', 'Shishalounge', 'Eisdiele', 'Dienstleister', 'Handwerk'],
+  },
+
+  // ============================================
+  // PROBLEMS SECTION
+  // ============================================
+  problems: {
+    title: 'Kommt Ihnen das bekannt vor?',
+    subtitle:
+      'Viele lokale Betriebe verlieren Kunden, bevor überhaupt ein Gespräch entsteht.',
+    items: [
+      {
+        problem: 'Ihre Website wirkt alt oder unübersichtlich.',
+        consequence:
+          'Besucher verlassen die Seite in Sekunden – ohne Kontakt aufzunehmen.',
+      },
+      {
+        problem: 'Auf dem Smartphone sieht man nicht sofort, worum es geht.',
+        consequence:
+          'Die meisten Kunden suchen vom Handy. Wer nicht sofort versteht, springt ab.',
+      },
+      {
+        problem: 'Kunden finden Sie zwar, melden sich aber nicht.',
+        consequence:
+          'Kein klarer Weg zum Kontakt bedeutet: kein Kontakt.',
+      },
+    ],
+  },
+
+  // ============================================
+  // FEATURES / SOLUTIONS SECTION
   // ============================================
   features: {
-    title: 'Powerful Capabilities',
-    subtitle:
-      'Everything you need to build, deploy, and scale intelligent automation',
+    title: 'Was Ihre neue Website leisten soll',
+    subtitle: 'Kein Technik-Spielzeug. Nur das, was Ihrem Betrieb wirklich nützt.',
     items: [
-      { icon: 'lightning', title: 'Autonomous Execution' },
-      { icon: 'code', title: 'Smart Integration' },
-      { icon: 'chart', title: 'Real-Time Analytics' },
-      { icon: 'chat', title: 'Natural Language' },
-      { icon: 'shield', title: 'Enterprise Security' },
-      { icon: 'clock', title: '24/7 Operation' },
-      { icon: 'brush', title: 'Custom Workflows' },
-      { icon: 'layers', title: 'Multi-Agent Teams' },
-      { icon: 'zap', title: 'Instant Scaling' },
+      { icon: 'shield', title: 'Mehr Vertrauen auf den ersten Blick' },
+      { icon: 'mobile', title: 'Besser auf dem Smartphone' },
+      { icon: 'phone', title: 'Klare Wege zu Anruf oder Nachricht' },
+      { icon: 'zap', title: 'Technisch sauber und schnell' },
     ],
   },
 
@@ -89,85 +122,83 @@ export const siteConfig = {
   // HOW IT WORKS
   // ============================================
   howItWorks: {
-    title: 'How It Works',
-    subtitle: 'Get started in minutes with our simple 5-step process',
+    title: 'So läuft es ab',
+    subtitle: 'Drei Schritte – klar, persönlich, ohne Überraschungen.',
   },
 
   // ============================================
   // TESTIMONIALS
   // ============================================
   testimonials: {
-    title: 'Loved by Teams Worldwide',
-    subtitle: 'See what our customers have to say about AI Agent Platform',
-    companyLogos: [
-      'TECHFLOW',
-      'INNOVATE',
-      'DATASTREAM',
-      'CLOUDSYNC',
-      'NEXUSAI',
-    ],
+    title: 'Was unsere Kunden sagen',
+    subtitle: 'Echte Betriebe. Echte Ergebnisse.',
+    googleUrl: '#', // TODO: replace with real Google Business Profile URL
+    googleLabel: 'Alle Bewertungen auf Google ansehen',
   },
 
   // ============================================
-  // PRICING
+  // PAKETE (ehem. Pricing)
   // ============================================
   pricing: {
-    title: 'Simple, Transparent Pricing',
+    title: 'Unsere Pakete',
     subtitle:
-      'Choose the plan that fits your needs. Upgrade or downgrade anytime.',
+      'Transparent, ohne versteckte Kosten. Sie wissen von Anfang an, was Sie bekommen.',
     plans: [
       {
-        name: 'Free',
-        price: '$0',
-        period: '/month',
-        description: 'Perfect for individuals and testing',
+        name: 'Starter-Website',
+        price: 'ab 990 €',
+        period: 'einmalig',
+        description: 'Ideal für den ersten professionellen Auftritt im Netz.',
         features: [
-          'Up to 3 agents',
-          '1,000 tasks/month',
-          'Basic integrations',
-          'Email support',
+          'Eine übersichtliche Seite',
+          'Optimiert für Smartphones',
+          'Kontaktformular & Telefon-Link',
+          'Lokale SEO-Grundlagen',
+          'Impressum & Datenschutz',
         ],
         cta: {
-          text: 'Get Started',
+          text: 'Erstgespräch vereinbaren',
           href: '#contact',
         },
         featured: false,
       },
       {
-        name: 'Pro',
-        price: '$49',
-        period: '/month',
-        description: 'For growing teams and businesses',
-        badge: 'MOST POPULAR',
+        name: 'Business-Website',
+        price: 'ab 1.890 €',
+        period: 'einmalig',
+        description:
+          'Für Betriebe, die professionell auftreten und mehr Anfragen wollen.',
+        badge: 'EMPFOHLEN',
         features: [
-          'Unlimited agents',
-          '50,000 tasks/month',
-          'All integrations',
-          'Priority support',
-          'Advanced analytics',
-          'Team collaboration',
+          'Bis zu 5 Seiten',
+          'Schnelle Ladezeiten (kein Baukasten)',
+          'Lokale Auffindbarkeit (Google)',
+          'Google Business-Einrichtung',
+          'Professionelle Texte & Struktur',
+          'Direkter Kontakt zu Anruf & Nachricht',
         ],
         cta: {
-          text: 'Start Free Trial',
+          text: 'Erstgespräch vereinbaren',
           href: '#contact',
         },
         featured: true,
       },
       {
-        name: 'Enterprise',
-        price: 'Custom',
+        name: 'Rundum-sorglos',
+        price: 'Auf Anfrage',
         period: '',
-        description: 'For large-scale operations',
+        description:
+          'Business-Website plus laufende Pflege und persönliche Betreuung.',
         features: [
-          'Unlimited everything',
-          'Custom integrations',
-          'Dedicated support',
-          'SLA guarantee',
-          'On-premise option',
-          'Custom training',
+          'Alles aus Business-Website',
+          'Laufende Updates & Pflege',
+          'Inhaltliche Aktualisierungen',
+          'Technische Betreuung inklusive',
+          'Direkter Ansprechpartner',
+          'Priorität bei Änderungswünschen',
         ],
         cta: {
-          text: 'Contact Sales',
+          text: 'Anfrage stellen',
           href: '#contact',
         },
         featured: false,
@@ -179,45 +210,45 @@ export const siteConfig = {
   // FAQ
   // ============================================
   faq: {
-    title: 'Frequently Asked Questions',
-    subtitle: 'Everything you need to know about AI Agent Platform',
+    title: 'Häufige Fragen',
+    subtitle: 'Klar und ehrlich beantwortet – so wie wir auch arbeiten.',
   },
 
   // ============================================
   // CONTACT
   // ============================================
   contact: {
-    title: 'Start Building Today',
+    title: 'Lassen Sie uns kurz besprechen, was Ihre Website leisten soll.',
     subtitle:
-      'Join thousands of teams using AI agents to automate their workflows. Get started in minutes with our free tier.',
+      'Kostenloses Erstgespräch, kein Verkaufsdruck. Einfach erzählen, was Ihr Betrieb braucht.',
+    phone: '+49 151 00000000', // TODO: replace with real phone
+    phoneHref: 'tel:+4915100000000', // TODO: replace with real phone
+    whatsapp: 'https://wa.me/4915100000000', // TODO: replace with real WhatsApp link
+    email: 'hallo@maxidenn.de', // TODO: replace with real email
+    replyTime: 'Antwortet meist innerhalb von 24 Stunden',
     benefits: [
-      'No credit card required',
-      'Setup in under 5 minutes',
-      'Cancel anytime',
-      '24/7 customer support',
+      'Kein Verkaufsdruck',
+      'Persönliches Gespräch mit dem Entwickler',
+      'Kostenlos und unverbindlich',
+      'Schnelle Rückmeldung',
     ],
-    email: 'hello@aiagentplatform.com',
     form: {
-      cta: 'Get Started Free',
+      cta: 'Nachricht senden',
       fields: {
         name: {
-          label: 'Full Name',
-          placeholder: 'John Doe',
+          label: 'Ihr Name',
+          placeholder: 'Max Mustermann',
           required: true,
         },
-        email: {
-          label: 'Work Email',
-          placeholder: 'john@company.com',
+        contact: {
+          label: 'Telefon oder E-Mail',
+          placeholder: '+49 151 … oder max@beispiel.de',
           required: true,
-        },
-        company: {
-          label: 'Company',
-          placeholder: 'Your Company Inc.',
-          required: false,
         },
         message: {
-          label: 'What would you like to automate?',
-          placeholder: 'Tell us about your workflow and automation needs...',
+          label: 'Kurze Nachricht',
+          placeholder:
+            'Erzählen Sie kurz, was Ihr Betrieb macht und was Sie sich wünschen …',
           required: false,
         },
       },
@@ -228,46 +259,31 @@ export const siteConfig = {
   // FOOTER
   // ============================================
   footer: {
-    tagline:
-      'Intelligent automation for modern teams. Transform your workflow with AI.',
+    tagline: 'Persönliche Webentwicklung für lokale Betriebe.',
+    location: 'Deutschland',
     columns: [
       {
-        title: 'Product',
+        title: 'Navigation',
         links: [
-          { name: 'Features', href: '#features' },
-          { name: 'Pricing', href: '#pricing' },
-          { name: 'Integrations', href: '#' },
-          { name: 'API Docs', href: '#' },
-          { name: 'Changelog', href: '#' },
+          { name: 'Leistungen', href: '#features' },
+          { name: 'Referenzen', href: '#testimonials' },
+          { name: 'Pakete', href: '#pricing' },
+          { name: 'FAQ', href: '#faq' },
+          { name: 'Kontakt', href: '#contact' },
         ],
       },
       {
-        title: 'Company',
+        title: 'Rechtliches',
         links: [
-          { name: 'About Us', href: '#' },
-          { name: 'Blog', href: '#' },
-          { name: 'Careers', href: '#' },
-          { name: 'Press Kit', href: '#' },
-          { name: 'Contact', href: '#contact' },
-        ],
-      },
-      {
-        title: 'Legal',
-        links: [
-          { name: 'Privacy Policy', href: '#' },
-          { name: 'Terms of Service', href: '#' },
-          { name: 'Cookie Policy', href: '#' },
-          { name: 'Security', href: '#' },
-          { name: 'Compliance', href: '#' },
+          { name: 'Impressum', href: '/impressum' },
+          { name: 'Datenschutz', href: '/datenschutz' },
         ],
       },
     ],
     social: [
-      { name: 'Twitter', href: '#', icon: 'twitter' },
-      { name: 'GitHub', href: '#', icon: 'github' },
-      { name: 'Dribbble', href: '#', icon: 'dribbble' },
-      { name: 'LinkedIn', href: '#', icon: 'linkedin' },
+      { name: 'Instagram', href: '#', icon: 'instagram' }, // TODO: replace with real URL
+      { name: 'LinkedIn', href: '#', icon: 'linkedin' }, // TODO: replace with real URL
     ],
-    copyright: `${new Date().getFullYear()} AI Agent Platform. All rights reserved.`,
+    copyright: `${new Date().getFullYear()} maxidenn. Alle Rechte vorbehalten.`,
   },
 };

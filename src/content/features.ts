@@ -1,56 +1,26 @@
 export const featuresContent = [
   {
-    icon: 'lightning',
-    title: 'Autonomous Execution',
-    description:
-      'AI agents that understand context, make decisions, and execute tasks without constant supervision.',
-  },
-  {
-    icon: 'code',
-    title: 'Smart Integration',
-    description:
-      'Seamlessly connect with your tools: Slack, email, databases, APIs, and 1000+ platforms.',
-  },
-  {
-    icon: 'chart',
-    title: 'Real-Time Analytics',
-    description:
-      'Monitor performance, track success rates, and optimize workflows with detailed insights.',
-  },
-  {
-    icon: 'chat',
-    title: 'Natural Language',
-    description:
-      'Configure agents using plain English. No complex programming or technical expertise required.',
-  },
-  {
     icon: 'shield',
-    title: 'Enterprise Security',
+    title: 'Mehr Vertrauen auf den ersten Blick',
     description:
-      'Bank-level encryption, SOC 2 compliance, and complete data privacy. Your data stays secure.',
+      'Klare Struktur statt Informationschaos. Besucher sehen sofort, was Sie anbieten und wie sie Sie erreichen.',
   },
   {
-    icon: 'clock',
-    title: '24/7 Operation',
+    icon: 'mobile',
+    title: 'Besser auf dem Smartphone',
     description:
-      'Agents work around the clock, handling tasks while you sleep. Reliable uptime guaranteed.',
+      'Die meisten Ihrer Kunden suchen vom Handy. Ihre Leistungen werden sofort erkennbar, egal auf welchem Gerät.',
   },
   {
-    icon: 'brush',
-    title: 'Custom Workflows',
+    icon: 'phone',
+    title: 'Klare Wege zu Anruf oder Nachricht',
     description:
-      'Build tailored automation flows that match your unique business processes and requirements.',
-  },
-  {
-    icon: 'layers',
-    title: 'Multi-Agent Teams',
-    description:
-      'Coordinate multiple specialized agents working together to solve complex, multi-step challenges.',
+      'Telefonnummer, Kontaktformular und Nachrichtenoption sind immer greifbar. Kein Suchen, kein Abspringen.',
   },
   {
     icon: 'zap',
-    title: 'Instant Scaling',
+    title: 'Technisch sauber und schnell',
     description:
-      'Scale from 1 to 1000+ agents instantly. Handle peak loads without infrastructure headaches.',
+      'Keine aufgeblähten Baukästen. Schnell geladen, stabil und bei Bedarf leicht erweiterbar.',
   },
 ];

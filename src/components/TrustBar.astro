@@ -1,0 +1,60 @@
+---
+import { siteConfig } from '../config.ts';
+import { Icon } from 'astro-icon/components';
+
+const { googleRating, googleReviewCount, googleUrl, replyTime, industries } =
+  siteConfig.trustBar;
+---
+
+<div class="border-brand-surface border-y bg-white px-4 py-4 sm:px-6 lg:px-8">
+  <div
+    class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row sm:gap-6"
+  >
+    <a
+      href={googleUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group flex items-center gap-2"
+    >
+      <div class="flex">
+        {
+          Array.from({ length: 5 }).map(() => (
+            <Icon
+              name="heroicons:star-solid"
+              class="text-brand-accent h-4 w-4"
+            />
+          ))
+        }
+      </div>
+      <span class="text-brand-primary text-sm font-semibold"
+        >{googleRating}</span
+      >
+      <span class="text-brand-muted text-sm"
+        >({googleReviewCount} Bewertungen auf Google)</span
+      >
+      <Icon
+        name="heroicons:arrow-top-right-on-square"
+        class="text-brand-muted group-hover:text-brand-primary h-3.5 w-3.5 transition-colors"
+      />
+    </a>
+
+    <div class="bg-brand-surface hidden h-4 w-px sm:block"></div>
+
+    <div class="flex items-center gap-2">
+      <Icon name="heroicons:clock" class="text-brand-secondary h-4 w-4" />
+      <span class="text-brand-muted text-sm">{replyTime}</span>
+    </div>
+
+    <div class="bg-brand-surface hidden h-4 w-px sm:block"></div>
+
+    <div class="flex flex-wrap justify-center gap-2">
+      {
+        industries.map((industry) => (
+          <span class="border-brand-surface text-brand-secondary rounded-full border px-3 py-0.5 text-xs">
+            {industry}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</div>

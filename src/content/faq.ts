@@ -1,32 +1,32 @@
 export const faqItems = [
   {
-    question: 'What is an AI agent and how does it work?',
+    question: 'Was kostet eine Website ungefähr?',
     answer:
-      'An AI agent is an autonomous software program that can understand instructions, make decisions, and perform tasks on your behalf. Our agents use advanced language models to interpret your goals, connect with your tools, and execute complex workflows automatically—learning and improving over time.',
+      'Eine einfache, professionelle Starter-Website beginnt ab 990 €. Für eine mehrseitige Business-Website mit lokalem SEO und Google-Integration liegt der Einstieg bei 1.890 €. Alle Preise sind einmalig – keine monatlichen Abogebühren, außer bei unserem Rundum-sorglos-Paket. Im Erstgespräch besprechen wir, was für Ihren Betrieb wirklich passt.',
   },
   {
-    question: 'Do I need coding knowledge to use this platform?',
+    question: 'Wie lange dauert das Projekt?',
     answer:
-      'Not at all! Our platform is designed for everyone. You configure agents using natural language—just describe what you want in plain English. The AI handles all the technical complexity behind the scenes. That said, developers can also access advanced features and APIs for custom integrations.',
+      'Eine Starter-Website ist in der Regel innerhalb von 1–2 Wochen live. Eine Business-Website dauert je nach Umfang 2–4 Wochen. Den genauen Zeitplan besprechen wir beim Erstgespräch – und halten ihn auch ein.',
   },
   {
-    question: 'How secure is my data?',
+    question: 'Kann ich später selbst Änderungen vornehmen?',
     answer:
-      'Security is our top priority. We use bank-level encryption (AES-256) for data at rest and in transit, are SOC 2 Type II certified, and maintain strict access controls. Your data is never used to train AI models, and we offer enterprise options including on-premise deployment for maximum control.',
+      'Ja. Wir richten nach Wunsch ein einfaches System ein, mit dem Sie Texte und Bilder selbst aktualisieren können – ohne Technikwissen. Wenn Sie lieber möchten, dass wir uns darum kümmern, bieten wir auch laufende Betreuung an.',
   },
   {
-    question: 'Can I integrate with my existing tools?',
+    question: 'Was ist mit lokaler Auffindbarkeit bei Google?',
     answer:
-      'Yes! We support 1000+ integrations including Slack, Microsoft Teams, Gmail, Salesforce, HubSpot, databases, and custom APIs. Most integrations take just a few clicks to set up. If you need a custom integration, our Enterprise plan includes dedicated support to build exactly what you need.',
+      'Lokale Auffindbarkeit ist fester Bestandteil unserer Arbeit. Wir sorgen dafür, dass Ihre Website bei Suchanfragen wie „Shishabar [Stadt]" oder „Eisdiele in meiner Nähe" sichtbar wird – durch saubere Seitenstruktur, relevante Inhalte und Google Business-Einrichtung.',
   },
   {
-    question: "What happens if I exceed my plan's task limit?",
+    question: 'Muss ich schon Texte oder Bilder haben?',
     answer:
-      "We'll notify you when you approach your limit. You can upgrade to a higher plan anytime, or purchase additional task packs. Your agents won't stop working—we'll never leave you hanging mid-workflow. We believe in flexible, fair pricing that grows with your needs.",
+      'Nein. Wir helfen Ihnen dabei, die richtigen Inhalte zu entwickeln. Sie erklären uns, was Ihr Betrieb macht und was Ihre Kunden wissen sollen – wir formulieren das verständlich und wirkungsvoll.',
   },
   {
-    question: 'Can I cancel my subscription anytime?',
+    question: 'Was unterscheidet euch von Baukasten-Lösungen wie Wix oder Jimdo?',
     answer:
-      "Absolutely. You can cancel anytime with no penalties or fees. You'll retain access until the end of your billing period, and you can export all your data and configurations. We're confident you'll love the platform, but we never lock you in.",
+      'Baukästen sind für Selbermacher gemacht – das heißt: generische Vorlagen, viel unbenutzter Code und oft träge Ladezeiten. Wir entwickeln Ihre Website sauber und passend zu Ihrem Betrieb, ohne überflüssigen Ballast. Das Ergebnis: professionellerer Eindruck, schnellere Seite, und eine Basis, die man leicht weiterentwickeln kann.',
   },
 ];

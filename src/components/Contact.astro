@@ -3,119 +3,138 @@ import { siteConfig } from '../config.ts';
 import { Icon } from 'astro-icon/components';
 ---
 
-<section id="contact" class="bg-mono-lighter px-4 py-20 sm:px-6 lg:px-8">
+<section id="contact" class="bg-brand-surface px-4 py-20 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-7xl">
     <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
+
       <div class="scroll-fade-left">
-        <h2 class="text-mono-black mb-6 text-4xl font-bold sm:text-5xl">
+        <h2 class="text-brand-primary mb-4 text-4xl font-bold sm:text-5xl">
           {siteConfig.contact.title}
         </h2>
-        <p class="text-mono-dark mb-8 text-xl leading-relaxed">
+        <p class="text-brand-muted mb-8 text-xl leading-relaxed">
           {siteConfig.contact.subtitle}
         </p>
 
-        <ul class="mb-8 space-y-4">
+        <div class="mb-8 flex flex-col gap-3">
+          <a
+            href={siteConfig.contact.phoneHref}
+            class="bg-brand-accent hover:bg-brand-accent-hover flex items-center gap-3 rounded-lg px-6 py-4 font-semibold text-white transition-colors"
+          >
+            <Icon name="heroicons:phone" class="h-6 w-6 flex-shrink-0" />
+            <div>
+              <div class="text-sm font-normal opacity-80">Direkt anrufen</div>
+              <div>{siteConfig.contact.phone}</div>
+            </div>
+          </a>
+
+          <a
+            href={siteConfig.contact.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-brand-primary text-brand-primary hover:bg-brand-bg flex items-center gap-3 rounded-lg border-2 bg-white px-6 py-4 font-semibold transition-colors"
+          >
+            <Icon name="heroicons:chat-bubble-left-ellipsis" class="h-6 w-6 flex-shrink-0" />
+            <div>
+              <div class="text-brand-muted text-sm font-normal">WhatsApp</div>
+              <div>Nachricht schreiben</div>
+            </div>
+          </a>
+        </div>
+
+        <ul class="mb-8 space-y-3">
           {
             siteConfig.contact.benefits.map((benefit) => (
               <li class="flex items-center">
                 <Icon
                   name="heroicons:check"
-                  class="text-mono-black mr-4 h-6 w-6 flex-shrink-0"
+                  class="text-brand-accent mr-3 h-5 w-5 flex-shrink-0"
                 />
-                <span class="text-mono-dark">{benefit}</span>
+                <span class="text-brand-muted text-sm">{benefit}</span>
               </li>
             ))
           }
         </ul>
 
-        <div class="border-mono-light border-t pt-8">
-          <p class="text-mono-gray mb-4 text-sm">
-            Questions? Reach out to our team:
+        <div class="border-brand-surface border-t pt-6">
+          <p class="text-brand-muted mb-2 text-sm">
+            {siteConfig.contact.replyTime}
           </p>
           <a
             href={`mailto:${siteConfig.contact.email}`}
-            class="text-mono-black font-semibold">{siteConfig.contact.email}</a
+            class="text-brand-primary text-sm font-medium hover:underline"
           >
+            {siteConfig.contact.email}
+          </a>
         </div>
       </div>
 
       <div
-        class="scroll-fade-right border-mono-lighter rounded-xl border bg-white p-8 shadow-lg"
+        class="scroll-fade-right border-brand-surface rounded-xl border-2 bg-white p-8 shadow-sm"
       >
-        <form id="contactForm" class="space-y-6">
+        <p class="text-brand-primary mb-6 font-semibold">
+          Oder schreiben Sie uns kurz:
+        </p>
+        <form id="contactForm" class="space-y-5">
           <div>
             <label
               for="name"
-              class="text-mono-black mb-2 block text-sm font-semibold"
-              >{siteConfig.contact.form.fields.name.label}</label
+              class="text-brand-primary mb-2 block text-sm font-semibold"
             >
+              {siteConfig.contact.form.fields.name.label}
+            </label>
             <input
               type="text"
               id="name"
               name="name"
               required={siteConfig.contact.form.fields.name.required}
-              class="border-mono-lighter w-full rounded-lg border px-4 py-3"
+              class="border-brand-surface focus:border-brand-primary w-full rounded-lg border-2 px-4 py-3 outline-none transition-colors"
               placeholder={siteConfig.contact.form.fields.name.placeholder}
             />
           </div>
 
           <div>
             <label
-              for="email"
-              class="text-mono-black mb-2 block text-sm font-semibold"
-              >{siteConfig.contact.form.fields.email.label}</label
+              for="contact"
+              class="text-brand-primary mb-2 block text-sm font-semibold"
             >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required={siteConfig.contact.form.fields.email.required}
-              class="border-mono-lighter w-full rounded-lg border px-4 py-3"
-              placeholder={siteConfig.contact.form.fields.email.placeholder}
-            />
-          </div>
-
-          <div>
-            <label
-              for="company"
-              class="text-mono-black mb-2 block text-sm font-semibold"
-              >{siteConfig.contact.form.fields.company.label}</label
-            >
+              {siteConfig.contact.form.fields.contact.label}
+            </label>
             <input
               type="text"
-              id="company"
-              name="company"
-              class="border-mono-lighter w-full rounded-lg border px-4 py-3"
-              placeholder={siteConfig.contact.form.fields.company.placeholder}
+              id="contact"
+              name="contact"
+              required={siteConfig.contact.form.fields.contact.required}
+              class="border-brand-surface focus:border-brand-primary w-full rounded-lg border-2 px-4 py-3 outline-none transition-colors"
+              placeholder={siteConfig.contact.form.fields.contact.placeholder}
             />
           </div>
 
           <div>
             <label
               for="message"
-              class="text-mono-black mb-2 block text-sm font-semibold"
-              >{siteConfig.contact.form.fields.message.label}</label
+              class="text-brand-primary mb-2 block text-sm font-semibold"
             >
+              {siteConfig.contact.form.fields.message.label}
+            </label>
             <textarea
               id="message"
               name="message"
               rows="4"
-              class="form-input border-mono-lighter w-full resize-none rounded-lg border px-4 py-3"
+              class="border-brand-surface focus:border-brand-primary w-full resize-none rounded-lg border-2 px-4 py-3 outline-none transition-colors"
               placeholder={siteConfig.contact.form.fields.message.placeholder}
             ></textarea>
           </div>
 
           <button
             type="submit"
-            class="bg-mono-black w-full rounded-lg px-6 py-4 font-semibold text-white shadow-lg"
+            class="bg-brand-accent hover:bg-brand-accent-hover w-full rounded-lg px-6 py-4 font-semibold text-white shadow-sm transition-colors"
           >
             {siteConfig.contact.form.cta}
           </button>
 
-          <p class="text-mono-gray text-center text-xs leading-relaxed">
-            By submitting this form, you agree to our
-            <a href="#" class="underline">Terms of Service</a> and
-            <a href="#" class="underline">Privacy Policy</a>
+          <p class="text-brand-muted text-center text-xs leading-relaxed">
+            Mit dem Absenden stimmen Sie unserer
+            <a href="/datenschutz" class="underline">Datenschutzerklärung</a> zu.
           </p>
         </form>
       </div>
@@ -129,8 +148,8 @@ import { Icon } from 'astro-icon/components';
     if (contactForm) {
       contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
+        alert('Vielen Dank! Wir melden uns schnellstmöglich bei Ihnen.');
+        (contactForm as HTMLFormElement).reset();
       });
     }
   });

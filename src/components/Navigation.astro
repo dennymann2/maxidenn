@@ -4,27 +4,39 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <nav
-  class="border-mono-lighter fixed top-0 z-50 w-full border-b bg-white/95 backdrop-blur-sm"
+  class="border-brand-surface fixed top-0 z-50 w-full border-b bg-brand-bg/95 backdrop-blur-sm"
 >
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <div class="flex items-center">
-        <a href="/" class="text-mono-black text-xl font-bold"
-          >{siteConfig.site.name}</a
-        >
+        <a href="/" class="text-brand-primary text-xl font-bold tracking-tight">
+          {siteConfig.site.name}
+        </a>
       </div>
 
       <div class="hidden items-center space-x-8 md:flex">
         {
           siteConfig.navigation.links.map((link) => (
-            <a href={link.href} class="text-mono-dark">
+            <a
+              href={link.href}
+              class="text-brand-muted hover:text-brand-primary text-sm transition-colors"
+            >
               {link.name}
             </a>
           ))
         }
+
+        <a
+          href={siteConfig.site.phoneHref ?? `tel:${siteConfig.site.phone}`}
+          class="text-brand-primary flex items-center gap-1.5 text-sm font-semibold"
+        >
+          <Icon name="heroicons:phone" class="h-4 w-4" />
+          {siteConfig.site.phone}
+        </a>
+
         <a
           href={siteConfig.navigation.cta.href}
-          class="bg-mono-black rounded-lg px-6 py-2 text-white"
+          class="bg-brand-accent hover:bg-brand-accent-hover rounded-lg px-5 py-2 text-sm font-semibold text-white transition-colors"
         >
           {siteConfig.navigation.cta.text}
         </a>
@@ -35,9 +47,9 @@ import { Icon } from 'astro-icon/components';
         class="rounded-lg p-2 md:hidden"
         aria-controls="mobileMenu"
         aria-expanded="false"
-        aria-label="Toggle navigation menu"
+        aria-label="Menü öffnen"
       >
-        <Icon name="heroicons:bars-3" class="text-mono-black h-6 w-6" />
+        <Icon name="heroicons:bars-3" class="text-brand-primary h-6 w-6" />
       </button>
     </div>
 
@@ -45,14 +57,21 @@ import { Icon } from 'astro-icon/components';
       <div class="flex flex-col space-y-3">
         {
           siteConfig.navigation.links.map((link) => (
-            <a href={link.href} class="text-mono-dark py-2">
+            <a href={link.href} class="text-brand-muted py-2 text-sm">
               {link.name}
             </a>
           ))
         }
         <a
+          href={siteConfig.site.phoneHref ?? `tel:${siteConfig.site.phone}`}
+          class="text-brand-primary flex items-center gap-2 py-2 text-sm font-semibold"
+        >
+          <Icon name="heroicons:phone" class="h-4 w-4" />
+          {siteConfig.site.phone}
+        </a>
+        <a
           href={siteConfig.navigation.cta.href}
-          class="bg-mono-black rounded-lg px-6 py-3 text-center text-white"
+          class="bg-brand-accent rounded-lg px-6 py-3 text-center text-sm font-semibold text-white"
         >
           {siteConfig.navigation.cta.text}
         </a>

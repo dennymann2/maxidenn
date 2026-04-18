@@ -3,6 +3,8 @@ import '../styles/globals.css';
 import { siteConfig } from '../config.ts';
 import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
+import TrustBar from '../components/TrustBar.astro';
+import Problems from '../components/Problems.astro';
 import Features from '../components/Features.astro';
 import HowItWorks from '../components/HowItWorks.astro';
 import Testimonials from '../components/Testimonials.astro';
@@ -13,7 +15,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="de" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,9 +48,11 @@ import Footer from '../components/Footer.astro';
     />
   </head>
 
-  <body class="text-mono-black bg-white font-sans antialiased">
+  <body class="bg-brand-bg font-sans text-brand-text antialiased">
     <Navigation />
     <Hero />
+    <TrustBar />
+    <Problems />
     <Features />
     <HowItWorks />
     <Testimonials />
