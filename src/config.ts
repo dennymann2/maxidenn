@@ -15,6 +15,7 @@ export const siteConfig = {
       'Webdesign lokale Unternehmen, Website Gastronomie, Website Shishabar, Website Eisdiele, lokale Auffindbarkeit, Webdesign',
     email: 'hallo@maxidenn.de', // TODO: replace with real email
     phone: '+49 151 00000000', // TODO: replace with real phone
+    phoneHref: 'tel:+4915100000000', // TODO: replace with real phone
     whatsapp: 'https://wa.me/4915100000000', // TODO: replace with real WhatsApp link
     location: 'Deutschland',
     googleBusinessUrl: '#', // TODO: replace with real Google Business Profile URL
