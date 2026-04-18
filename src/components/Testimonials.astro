@@ -4,63 +4,90 @@ import { Icon } from 'astro-icon/components';
 import { testimonialsData } from '../content/testimonials';
 ---
 
-<section id="testimonials" class="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
+<section
+  id="testimonials"
+  class="border-brand-primary bg-brand-bg border-b-2 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+>
   <div class="mx-auto max-w-7xl">
-    <div class="scroll-fade-up mx-auto mb-16 max-w-3xl text-center">
-      <h2 class="text-brand-primary mb-4 text-4xl font-bold sm:text-5xl">
-        {siteConfig.testimonials.title}
-      </h2>
-      <p class="text-brand-muted text-xl">
-        {siteConfig.testimonials.subtitle}
-      </p>
+    <div
+      class="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"
+    >
+      <div class="max-w-3xl">
+        <h2 class="text-brand-primary mb-4 text-3xl font-bold sm:text-4xl">
+          {siteConfig.testimonials.title}
+        </h2>
+        <p class="text-brand-primary text-lg">
+          {siteConfig.testimonials.subtitle}
+        </p>
+      </div>
+
+      <a
+        href={siteConfig.testimonials.googleUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border-brand-primary text-brand-primary inline-flex w-fit items-center gap-2 rounded-md border-2 px-5 py-3 text-sm font-semibold transition-colors hover:bg-white"
+      >
+        <Icon name="heroicons:star-solid" class="text-brand-accent h-5 w-5" />
+        {siteConfig.testimonials.googleLabel}
+        <Icon name="heroicons:arrow-top-right-on-square" class="h-4 w-4" />
+      </a>
     </div>
 
-    <div class="mb-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
       {
-        testimonialsData.map((testimonial, index) => (
-          <div
-            class={`scroll-fade-up border-brand-accent bg-brand-bg rounded-xl border-l-4 p-8 shadow-sm stagger-${(index % 9) + 1}`}
-          >
-            <div class="mb-4 flex">
-              {Array.from({ length: testimonial.rating }).map(() => (
-                <Icon
-                  name="heroicons:star-solid"
-                  class="text-brand-accent h-5 w-5"
-                />
-              ))}
+        testimonialsData.map((testimonial) => (
+          <div class="border-brand-primary flex flex-col border-2 bg-white p-6">
+            <div class="border-brand-surface mb-5 flex items-center justify-between border-b pb-4">
+              <div class="flex" aria-label={`${testimonial.rating} Sterne`}>
+                {Array.from({ length: testimonial.rating }).map(() => (
+                  <Icon
+                    name="heroicons:star-solid"
+                    class="text-brand-accent h-4 w-4"
+                  />
+                ))}
+              </div>
+              <span class="text-brand-primary text-xs font-semibold tracking-wide uppercase">
+                Google
+              </span>
             </div>
-            <p class="text-brand-muted mb-6 leading-relaxed">
+
+            <p class="text-brand-primary mb-6 grow leading-relaxed">
               „{testimonial.quote}"
             </p>
-            <div class="flex items-center">
-              <div class="bg-brand-primary mr-4 flex h-12 w-12 items-center justify-center rounded-full font-semibold text-white">
-                {testimonial.initials}
-              </div>
-              <div>
-                <div class="text-brand-primary font-semibold">
-                  {testimonial.author}
+
+            <div class="border-brand-surface space-y-3 border-t pt-5">
+              <div class="flex items-center gap-3">
+                <div class="border-brand-primary bg-brand-surface text-brand-primary flex h-10 w-10 items-center justify-center border text-sm font-bold">
+                  {testimonial.initials}
                 </div>
-                <div class="text-brand-secondary text-sm">
-                  {testimonial.role}, {testimonial.company}
+                <div>
+                  <div class="text-brand-primary font-semibold">
+                    {testimonial.author}
+                  </div>
+                  <div class="text-brand-muted text-sm">
+                    {testimonial.role}, {testimonial.company}
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-2 text-sm">
+                <div>
+                  <span class="text-brand-muted">Kontext: </span>
+                  <span class="text-brand-primary font-semibold">
+                    {testimonial.context}
+                  </span>
+                </div>
+                <div>
+                  <span class="text-brand-muted">Ergebnis: </span>
+                  <span class="text-brand-primary font-semibold">
+                    {testimonial.result}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
         ))
       }
-    </div>
-
-    <div class="scroll-fade-up text-center">
-      <a
-        href={siteConfig.testimonials.googleUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="border-brand-surface hover:border-brand-accent hover:text-brand-accent text-brand-muted inline-flex items-center gap-2 rounded-lg border-2 bg-white px-6 py-3 text-sm font-medium transition-colors"
-      >
-        <Icon name="heroicons:star-solid" class="text-brand-accent h-5 w-5" />
-        {siteConfig.testimonials.googleLabel}
-        <Icon name="heroicons:arrow-top-right-on-square" class="h-4 w-4" />
-      </a>
     </div>
   </div>
 </section>

@@ -39,40 +39,19 @@ import Footer from '../components/Footer.astro';
       content={siteConfig.site.twitterDescription}
     />
     <meta name="twitter:image" content="/og-image.png" />
-
   </head>
 
-  <body class="bg-brand-bg font-sans text-brand-text antialiased">
+  <body class="bg-brand-bg text-brand-text font-sans antialiased">
     <Navigation />
     <Hero />
     <TrustBar />
+    <Testimonials />
     <Problems />
     <Features />
     <HowItWorks />
-    <Testimonials />
     <Pricing />
     <FAQ />
     <Contact />
     <Footer />
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -100px 0px',
-        };
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        }, observerOptions);
-        const scrollFadeElements = document.querySelectorAll(
-          '.scroll-fade, .scroll-fade-up, .scroll-fade-down, .scroll-fade-left, .scroll-fade-right',
-        );
-        scrollFadeElements.forEach((el) => observer.observe(el));
-      });
-    </script>
   </body>
 </html>

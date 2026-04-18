@@ -25,7 +25,8 @@ export const siteConfig = {
       'Professionelle Websites, die Vertrauen aufbauen und Anfragen bringen.',
     twitterCard: 'summary_large_image',
     twitterTitle: 'maxidenn – Webdesign für lokale Betriebe',
-    twitterDescription: 'Schnell, klar und ohne Baukasten-Look. Mehr Vertrauen, mehr Anfragen.',
+    twitterDescription:
+      'Schnell, klar und ohne Baukasten-Look. Mehr Vertrauen, mehr Anfragen.',
   },
 
   // ============================================
@@ -35,6 +36,7 @@ export const siteConfig = {
     links: [
       { name: 'Leistungen', href: '#features' },
       { name: 'Referenzen', href: '#testimonials' },
+      { name: 'Pakete', href: '#pricing' },
       { name: 'Kontakt', href: '#contact' },
     ],
     cta: {
@@ -76,7 +78,13 @@ export const siteConfig = {
     googleReviewCount: '12', // TODO: update with real count
     googleUrl: '#', // TODO: replace with real Google Business Profile URL
     replyTime: 'Antwortet meist innerhalb von 24 Stunden',
-    industries: ['Gastronomie', 'Shishalounge', 'Eisdiele', 'Dienstleister', 'Handwerk'],
+    industries: [
+      'Gastronomie',
+      'Shishalounge',
+      'Eisdiele',
+      'Dienstleister',
+      'Handwerk',
+    ],
   },
 
   // ============================================
@@ -99,8 +107,7 @@ export const siteConfig = {
       },
       {
         problem: 'Kunden finden Sie zwar, melden sich aber nicht.',
-        consequence:
-          'Kein klarer Weg zum Kontakt bedeutet: kein Kontakt.',
+        consequence: 'Kein klarer Weg zum Kontakt bedeutet: kein Kontakt.',
       },
     ],
   },
@@ -110,7 +117,8 @@ export const siteConfig = {
   // ============================================
   features: {
     title: 'Was Ihre neue Website leisten soll',
-    subtitle: 'Kein Technik-Spielzeug. Nur das, was Ihrem Betrieb wirklich nützt.',
+    subtitle:
+      'Kein Technik-Spielzeug. Nur das, was Ihrem Betrieb wirklich nützt.',
     items: [
       { icon: 'shield', title: 'Mehr Vertrauen auf den ersten Blick' },
       { icon: 'mobile', title: 'Besser auf dem Smartphone' },
@@ -228,9 +236,9 @@ export const siteConfig = {
     email: 'hallo@maxidenn.de', // TODO: replace with real email
     replyTime: 'Antwortet meist innerhalb von 24 Stunden',
     benefits: [
+      'Ehrliche Einschätzung, was wirklich sinnvoll ist',
       'Kein Verkaufsdruck',
-      'Persönliches Gespräch mit dem Entwickler',
-      'Kostenlos und unverbindlich',
+      'Unkomplizierter Erstkontakt',
       'Schnelle Rückmeldung',
     ],
     form: {
