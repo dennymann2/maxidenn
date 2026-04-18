@@ -1,7 +1,5 @@
 # maxidenn
 
-![Screenshot](public/screenshot.jpeg)
-
 Landing Page für **maxidenn** – Webdesign für lokale Betriebe. Gebaut mit Astro und Tailwind CSS.
 
 ## Tech Stack
