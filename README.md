@@ -1,57 +1,56 @@
-# AI Agent Landing Page
+# maxidenn
 
-![Demo](public/screenshot.jpeg)
+![Screenshot](public/screenshot.jpeg)
 
-A modern, production-ready landing page template for AI and SaaS products. Built with Astro and Tailwind CSS.
+Landing Page für **maxidenn** – Webdesign für lokale Betriebe. Gebaut mit Astro und Tailwind CSS.
 
-## Features
+## Tech Stack
 
-- ⚡️ **Astro 5** - Fast, static site generation
-- 🎨 **Tailwind CSS 4** - Modern styling with CSS-first config
-- 📱 **Fully Responsive** - Mobile-first design
-- ♿ **Accessible** - Semantic HTML & ARIA compliant
-- 🎭 **Smooth Animations** - Scroll-triggered effects
-- 🎯 **SEO Ready** - Meta tags & Open Graph
-- 🧩 **Modular Components** - Easy to customize
+- **Astro 6** – Static Site Generation
+- **Tailwind CSS 4** – CSS-first Konfiguration
+- **@fontsource-variable/geist** – Schrift lokal eingebunden (kein Google Fonts CDN)
+- **astro-icon** – Heroicons & Simple Icons
 
-## Sections
+## Seitenstruktur
 
-- Hero with stats
-- Features grid (9 cards)
-- How it works (4 steps)
-- Testimonials (6 with company logos)
-- Pricing tiers (3 plans)
-- FAQ accordion (6 questions)
-- Contact form
-- Footer
+**Hauptseite (`/`)**
+Navigation → Hero → TrustBar → Probleme → Leistungen → So läuft es ab → Referenzen → Pakete → FAQ → Kontakt → Footer
 
-## Quick Start
+**Rechtliche Seiten**
+- `/impressum` – Pflichtangaben gem. § 5 DDG
+- `/datenschutz` – Datenschutzerklärung gem. DSGVO Art. 13
+
+## Lokale Entwicklung
 
 ```bash
-# Install dependencies
 npm install
-
-# Start dev server
 npm run dev
-
-# Build for production
 npm run build
 ```
 
-## Customization
+## Konfiguration
 
-Edit content in:
+Alle Inhalte zentral in:
 
-- `src/config.ts` - Site configuration
-- `src/content/*.ts` - Features, testimonials, FAQ
-- `src/styles/globals.css` - Colors & animations
+- `src/config.ts` – Texte, Kontaktdaten, Navigation, Footer
+- `src/content/*.ts` – Features, Testimonials, FAQ, How-It-Works
+- `src/styles/globals.css` – Farben, Fonts, Animationen
+
+### Platzhalter ersetzen
+
+In `src/config.ts` alle Einträge mit `// TODO` befüllen:
+
+- Telefonnummer & WhatsApp-Link
+- E-Mail-Adresse
+- Google Business Profile URL
+- Instagram / LinkedIn URLs
+
+In `src/pages/impressum.astro` und `src/pages/datenschutz.astro`:
+
+- Name, Adresse, USt-IdNr.
+- Hosting-Anbieter
+- Zuständige Datenschutz-Aufsichtsbehörde (nach Bundesland)
 
 ## Deploy
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new)
-
-Works on Replit, Vercel, Netlify, and GitHub Pages.
-
-## License
-
-[MIT](LICENSE)
+Kompatibel mit Vercel, Netlify und GitHub Pages.
